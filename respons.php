@@ -16,6 +16,7 @@ while( $row = mysqli_fetch_array($result) ){
     $gender = $row['gender'];
     $city = $row['city'];
     $email = $row['email'];
+    
  
     $response .= "<tr>";
     $response .= "<td>Name : </td><td>".$emp_name."</td>";
