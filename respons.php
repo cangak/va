@@ -5,18 +5,16 @@ $nim = 0;
 if(isset($_POST['nim'])){
     $userid = mysqli_real_escape_string($con,$_POST['nim']);
 }
-$sql = "select * from employee where id=".$userid;
+$sql = "select * from no_va where nim=".$userid;
 $result = mysqli_query($con,$sql);
 
 $response = "<table border='0' width='100%'>";
 while( $row = mysqli_fetch_array($result) ){
-    $id = $row['id'];
-    $emp_name = $row['emp_name'];
-    $salary = $row['salary'];
-    $gender = $row['gender'];
-    $city = $row['city'];
-    $email = $row['email'];
-    
+    $nim = $row['nim'];
+    $nama = $row['nama'];
+    $jurusan = $row['jurusan'];
+    $nilai = $row['nilai'];
+    $va = $row['va'];  
  
     $response .= "<tr>";
     $response .= "<td>Name : </td><td>".$emp_name."</td>";

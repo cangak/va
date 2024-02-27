@@ -1,12 +1,10 @@
 $(document).ready(function(){
-
-    $('.userinfo').click(function(){
-   
-         var userid = $(this).data('id');
+   $('.ceknim').click(function(){
+         var userid = $('.nim').val();
 
          // AJAX request
          $.ajax({
-               url: 'ajaxfile.php',
+               url: 'respons.php',
                type: 'post',
                data: {userid: userid},
                success: function(response){ 
